@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://db.leoli.wiki:3306/exception_handler?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: leoli
+    password: Y@yd@jtc@10086
+    driver-class-name: com.mysql.cj.jdbc.Driver
