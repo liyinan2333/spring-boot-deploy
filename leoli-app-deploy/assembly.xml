@@ -10,19 +10,24 @@
     <dependencySets>
         <!-- 项目的依赖包 -->
         <dependencySet>
-            <useProjectArtifact>true</useProjectArtifact> <!-- 当前项目构件是否包含在这个依赖集合里 -->
-            <outputDirectory>./lib</outputDirectory><!-- 依赖jar包放置目录-->
+            <!-- 当前项目构件是否包含在这个依赖集合里 -->
+            <useProjectArtifact>true</useProjectArtifact>
+            <!-- 依赖jar包放置目录-->
+            <outputDirectory>./lib</outputDirectory>
         </dependencySet>
     </dependencySets>
     <fileSets>
         <!-- 程序运行的启动脚本 -->
         <fileSet>
-            <directory>src/main/resources/bin</directory>  <!-- 指定要包含的目录，必须是目录 -->
-            <outputDirectory>./bin</outputDirectory>   <!-- 打包的文件放在该目录下 -->
+            <!-- 指定要包含的目录，必须是目录 -->
+            <directory>src/main/resources/bin</directory>
+            <!-- 打包的文件放在该目录下 -->
+            <outputDirectory>./bin</outputDirectory>
             <includes>
                 <include>**/*</include>
             </includes>
-            <fileMode>0755</fileMode>
+            <!--文件执行权限-->
+            <fileMode>0775</fileMode>
         </fileSet>
         <fileSet>
             <!-- 配置文件 -->
@@ -31,7 +36,7 @@
             <includes>
                 <include>**/*</include>
             </includes>
-            <fileMode>0755</fileMode>   <!--文件执行权限-->
+            <fileMode>0755</fileMode>
         </fileSet>
     </fileSets>
 </assembly>

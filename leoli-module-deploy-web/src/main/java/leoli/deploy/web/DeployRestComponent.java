@@ -1,4 +1,4 @@
-package leoli.deploy.rest;
+package leoli.deploy.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component
-public class SpringBootDeployTemplateRestComponent {
+public class DeployRestComponent {
 
-    public static final String COMPONENT_NAME = "springboot-deploytemplate-rest";
-    private static final Logger LOGGER = LoggerFactory.getLogger(SpringBootDeployTemplateRestComponent.class);
+    public static final String COMPONENT_NAME = "deploy-web";
+    private static final Logger LOGGER = LoggerFactory.getLogger(DeployRestComponent.class);
 
     @PostConstruct
     void init() {

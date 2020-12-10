@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>leoli</groupId>
-    <artifactId>leoli-module-deploy-rest</artifactId>
+    <artifactId>leoli-module-deploy-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>leoli-module-deploy-rest</name>
-    <description>REST component for spring-boot-deploy-template</description>
+    <name>leoli-module-deploy-web</name>
+    <description>Web component for spring-boot-deploy-template</description>
 
     <properties>
         <java.version>11</java.version>
