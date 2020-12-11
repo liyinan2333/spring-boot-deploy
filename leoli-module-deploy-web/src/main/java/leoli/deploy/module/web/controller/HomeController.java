@@ -1,4 +1,4 @@
-package leoli.deploy.web.controller;
+package leoli.deploy.module.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
