@@ -22,6 +22,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>leoli</groupId>
+            <artifactId>leoli-service-deploy</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>

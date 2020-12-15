@@ -8,8 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = {"leoli.deploy"})
+@EnableJpaRepositories(basePackages = {"leoli.deploy"})
 public class DeployApplication {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DeployApplication.class);
