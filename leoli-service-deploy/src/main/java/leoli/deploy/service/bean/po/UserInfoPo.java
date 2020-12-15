@@ -3,8 +3,6 @@ package leoli.deploy.service.bean.po;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-
 import javax.persistence.*;
 
 /**
@@ -28,8 +26,8 @@ public class UserInfoPo {
 
     private @Column(name = "USR_SEX") int userSex;
 
-    private @Column(name = "USR_PHONE") int userPhone;
+    private @Column(name = "USR_PHONE") String userPhone;
 
-    private @Column(name = "USR_LOCAL") int userLocation;
+    private @Column(name = "USR_LOCAL") String userLocation;
 
 }
