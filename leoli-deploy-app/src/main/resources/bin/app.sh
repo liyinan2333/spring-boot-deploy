@@ -1,7 +1,7 @@
 #!/bin/bash
 
-appName="leoli-app-deploy"
-mainCls="leoli-app-deploy-0.0.1-SNAPSHOT.jar"
+appName="leoli-deploy-app"
+mainCls="leoli-deploy-app-0.0.1-SNAPSHOT.jar"
 if [ -z $appName ]
 then
     echo "Please check that this script and your jar-package is in the same directory!"
@@ -17,7 +17,7 @@ function start()
         echo "Maybe $appName is running, please check it..."
     else
         echo "The $appName is starting..."
-        nohup java -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -Xms512M -Xmx4G -jar ../lib/$mainCls --spring.config.location=../config/application.yml > main.log 2>&1 &
+        nohup java -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -Xms512M -Xmx4G -jar ../lib/$mainCls --spring.config.location=../config/application.yml > /dev/null 2>../logs/error.log &
     fi
 }
 

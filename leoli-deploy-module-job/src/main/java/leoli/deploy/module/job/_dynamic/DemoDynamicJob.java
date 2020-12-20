@@ -5,12 +5,12 @@ import leoli.deploy.service.data.JobRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.Example;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -18,8 +18,8 @@ import java.util.Optional;
 /**
  * SpringBoot 动态定时任务Demo
  */
-@Configuration
-@EnableScheduling
+//@Component
+//@EnableScheduling
 public class DemoDynamicJob implements SchedulingConfigurer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DemoDynamicJob.class);
@@ -29,6 +29,7 @@ public class DemoDynamicJob implements SchedulingConfigurer {
 
     @Override
     public void configureTasks(ScheduledTaskRegistrar register) {
+        // TriggerTask 循环读取数据库，设定下一次执行时间
         register.addTriggerTask(() -> {
             // job runnable
             System.out.println("执行动态定时任务: " + LocalDateTime.now().toLocalTime());
